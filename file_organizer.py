@@ -9,9 +9,6 @@ pdf_path = "/home/user/data/dev/organizer/pdf"
 xlsx_path = "/home/user/data/dev/organizer/xlsx"
 docx_path = "/home/user/data/dev/organizer/docx"
 pptx_path = "/home/user/data/dev/organizer/pptx"
-#unidentified_path = ""
-#vid_path = ""
-#vid_format = {}
 
 # list all files in main dir
 files = os.listdir(source)
@@ -32,9 +29,4 @@ for file in files:
   # move MS PowerPoint files
   elif file.endswith(".pptx"):
     shutil.move(f"{source}/{file}", pptx_path)
-  # move vidoes
-  elif file.endswith(vid_format):
-    shutil.move(f"{source}/{file}", vid_path)
-
-  #else:
-   # shutil.move(f"{source}/{file}", unidentified_path)
+  
